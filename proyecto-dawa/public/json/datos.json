@@ -6,8 +6,11 @@
             "direccion": "Calle 123, Ciudad X",
             "telefono": "555-1234",
             "email": "juan.perez@email.com",
-            "fecha_registro": "2024-01-10",
-            "tipos_material": ["plástico", "metal"]
+            "fechora_recolecciona_registro": "2024-01-10",
+            "materiales": [
+              {"id":1, "nombre": "Plástico", "cantidad": 10, "unidad":"kg", "fecha_registro":"16-11-2024"},
+              {"id":2, "nombre": "Metal", "cantidad": 15, "unidad":"kg", "fecha_registro":"16-11-2024"}
+            ]
         },
         {
             "id": 2,
@@ -15,8 +18,11 @@
             "direccion": "Avenida 456, Ciudad Y",
             "telefono": "555-5678",
             "email": "maria.lopez@email.com",
-            "fecha_registro": "2024-02-15",
-            "tipos_material": ["papel", "vidrio"]
+            "fechora_recolecciona_registro": "2024-02-15",
+            "materiales": [
+              {"id":1, "nombre": "Papel", "cantidad": 25, "unidad":"kg", "fecha_registro":"16-11-2024"},
+              {"id":2, "nombre": "Vidrio", "cantidad": 5, "unidad":"kg", "fecha_registro":"16-11-2024"}
+            ]
         },
         {
             "id": 3,
@@ -24,35 +30,14 @@
             "direccion": "Calle 789, Ciudad Z",
             "telefono": "555-9012",
             "email": "carlos.mendez@email.com",
-            "fecha_registro": "2024-03-20",
-            "tipos_material": ["metal", "vidrio"]
+            "fechora_recolecciona_registro": "2024-03-20",
+            "materiales": [
+              {"id":1, "nombre": "Metal", "cantidad": 10, "unidad":"kg", "fecha_registro":"16-11-2024"},
+              {"id":2, "nombre": "Vidrio", "cantidad": 10, "unidad":"kg", "fecha_registro":"16-11-2024"}
+            ]
         }
     ],
 
-   "material": [
-        {
-            "id": 1,
-            "id_hogar": 1,
-            "tipo_material": "plástico",
-            "cantidad": 5,
-            "fecha_registro": "2024-04-01"
-        },
-        {
-            "id": 2,
-            "id_hogar": 1,
-            "tipo_material": "metal",
-            "cantidad": 3,
-            "fecha_registro": "2024-04-01"
-        },
-        {
-            "id": 3,
-            "id_hogar": 2,
-            "tipo_material": "papel",
-            "cantidad": 7,
-            "fecha_registro": "2024-04-05"
-        }
-    ],
-   
     "empresa":[
         {
             "id": 1,
@@ -60,8 +45,8 @@
             "direccion": "Av. Central 123, Ciudad X",
             "telefono": "555-3456",
             "email": "contacto@reciclajesverdes.com",
-            "hora_recolección": "09:00",
-            "tipos_material_recolectado": ["plástico", "metal"]
+            "hora_recoleccion": "09:00",
+            "materiales": ["plástico", "metal"]
         },
         {
             "id": 2,
@@ -69,8 +54,8 @@
             "direccion":"Calle 789, Ciudad Z",
             "telefono": "555-7890",
             "email": "info@ecorecicla.com",
-            "h": "r9:15",
-            "tipos_material_recolectado":  ["papel", "vidrio"]
+            "hora_recoleccion": "9:15",
+            "materiales":  ["papel", "vidrio"]
         },
         {
             "id": 3,
@@ -78,8 +63,8 @@
             "direccion": "Av. Sur, Ciudad Guayaquil",
             "telefono": "588-34562",
             "email": "contacto@urvaseo.com",
-            "h": "r9:30",
-            "tipos_material_recolectado": ["plástico", "papel"]
+            "hora_recoleccion": "9:30",
+            "materiales": ["plástico", "papel"]
         }
     ]
 }

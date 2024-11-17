@@ -1,3 +1,5 @@
+import { Material } from "./Material";
+
 export interface Hogar{
     id?: number;
     nombre_usuario: string
@@ -5,5 +7,5 @@ export interface Hogar{
     telefono: string
     email: string
     fecha_registro: string
-    tipos_material: string[]
+    tipos_material: Material[]
 }

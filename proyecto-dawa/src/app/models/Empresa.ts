@@ -5,5 +5,5 @@ export interface Empresa{
     telefono: string
     email: string
     hora_recoleccion: string
-    tipos_material_recolectado: 
+    material: string
 }
