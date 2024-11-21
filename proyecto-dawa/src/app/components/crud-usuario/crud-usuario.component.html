@@ -1,7 +1,45 @@
 <p>crud-usuario works!</p>
+
 <form [formGroup]="form" class="ocultar">
     <mat-form-field appearance="outline" class="formElement">
         <mat-label>Nombre</mat-label>
         <input matInput type="text" placeholder="Ingrese un Nombre" formControlName="nombre">
       </mat-form-field>
 </form>
+
+<!-- Tabla de usuarios -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>Nombre</th>
+    <td mat-cell *matCellDef="let usuario">{{usuario.nombre}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let usuario">{{usuario.email}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="rol">
+    <th mat-header-cell *matHeaderCellDef>Rol</th>
+    <td mat-cell *matCellDef="let usuario">{{usuario.rol}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef>Estado</th>
+    <td mat-cell *matCellDef="let usuario">{{usuario.estado}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Acciones</th>
+    <td mat-cell *matCellDef="let hogar">
+      <button mat-raised-button color="accent" (click)="editar(hogar)">Editar</button>
+      <button mat-raised-button color="warn" (click)="eliminar(hogar)">Eliminar</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="['nombre_usuario', 'direccion','telefono','email', 'fecha_registro', 'tipos_material','actions']"></tr>
+  <tr mat-row *matRowDef="let row, columns: ['nombre_usuario', 'direccion','telefono','email', 'fecha_registro', 'tipos_material', 'actions'];"></tr>
+
+</table>
+<mat-paginator [pageSizeOptions]="[5,7,100]" arial-label="Select page" showFirstLastButtons></mat-paginator>
